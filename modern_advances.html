@@ -6,24 +6,105 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-  <main>
-    <h1>HTTP</h1>
+<header>
+    <h1>Modern Advances</h1>
 
-
-    <p>HTTP Content</p>
-
-    
     <nav>
-            <a href="index.html">Home</a>
-            <a href="evolution_versions.html">Evolution and Versions</a>
-            <a href="security_https.html">Security and HTTPS</a>
-            <a href="modern_advances.html">Modern Advances</a>
-            <a href="about.html">About Me</a>
-            <a href="references.html">References</a>
+        <a href="index.html">Home</a>
+        <a href="evolution_versions.html">Evolution and Versions</a>
+        <a href="security_https.html">Security and HTTPS</a>
+        <a href="modern_advances.html">Modern Advances</a>
+        <a href="about.html">About Me</a>
+        <a href="references.html">References</a>
     </nav>
 
+</header>
+
+<body>
+  <main class="custom_page">
+
+    <h2>Overview</h2>
+
+    <p>
+      As the internet grew in scale and complexity, new versions of HTTP were developed
+      to support faster data delivery, stronger security, and more efficient communication.
+      Modern web technologies such as streaming, cloud computing, and real-time applications
+      rely on these advancements to operate smoothly.
+    </p>
+
+    <h2>HTTP/2 Improvements</h2>
+
+    <ul>
+      <li><strong>Multiplexing:</strong> Allows multiple requests and responses to share a single connection.</li>
+      <li><strong>Header Compression:</strong> Reduces redundant data to improve load times.</li>
+      <li><strong>Prioritization:</strong> Lets browsers request critical resources first for faster rendering.</li>
+      <li><strong>Binary Framing:</strong> Transmits data as compact binary instead of text for efficiency.</li>
+    </ul>
+
+    <h2>HTTP/3 and QUIC</h2>
+
+    <p>
+      HTTP/3 is built on a transport protocol called QUIC(Quick UDP Internet Connections),
+      developed by Google. Unlike older versions that use TCP, QUIC runs on UDP, allowing faster
+      connections with fewer delays and built-in encryption.
+    </p>
+
+    <ul>
+      <li><strong>Zero-RTT Connection:</strong> Establishes secure communication almost instantly.</li>
+      <li><strong>Stream Independence:</strong> Prevents one slow stream from blocking others.</li>
+      <li><strong>Integrated Security:</strong> Combines encryption and transport setup in one step.</li>
+    </ul>
+
+    <h2>Performance Comparison</h2>
+
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>HTTP/2</th>
+        <th>HTTP/3</th>
+      </tr>
+      <tr>
+        <td>Transport Protocol</td>
+        <td>TCP</td>
+        <td>UDP (via QUIC)</td>
+      </tr>
+      <tr>
+        <td>Setup Time</td>
+        <td>Two handshakes (TCP + TLS)</td>
+        <td>Single handshake (combined)</td>
+      </tr>
+      <tr>
+        <td>Connection Recovery</td>
+        <td>Slower if interrupted</td>
+        <td>Faster recovery with connection IDs</td>
+      </tr>
+      <tr>
+        <td>Security</td>
+        <td>TLS 1.2 or 1.3</td>
+        <td>TLS 1.3 integrated into QUIC</td>
+      </tr>
+      <tr>
+        <td>Latency</td>
+        <td>Moderate</td>
+        <td>Low, even on mobile networks</td>
+      </tr>
+    </table>
+
+    <h2>The Future of HTTP</h2>
+
+    <p>
+      The evolution of HTTP continues as developers aim to balance speed and security.
+      Future updates may focus on adapting to new challenges such as quantum computing,
+      which could impact encryption standards, and the continued growth of global cloud and mobile traffic.
+      HTTP remains at the center of how the web communicates, constantly improving to meet new demands.
+    </p>
+
   </main>
+
+  <footer>
+    <p>Class Project for IT 3203, Fall 2024.</p>
+  </footer>
+
 
 </body>
 
