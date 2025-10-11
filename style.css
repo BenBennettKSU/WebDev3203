@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f9ff;
+  color: #222;
+  margin: 30px;
+}
+
+/* ==== HEADER & NAVIGATION ==== */
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0044cc;
+  margin: 0 5px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ==== HEADINGS ==== */
+h1 {
+  color: #002b80;
+}
+
+h2 {
+  color: #003399;
+  border-bottom: 2px solid #99b3ff;
+  padding-bottom: 4px;
+  margin-top: 30px;
+}
+
+/* ==== LISTS ==== */
+ul {
+  list-style-type: square;
+  margin-left: 30px;
+}
+
+/* ==== TABLE ==== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #d9e1ff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f5ff;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+}
+
+footer a {
+  color: #0044cc;
+}
+
+/* ==== OPTIONAL UNIQUE PAGE STYLE ==== */
+.evolution-page {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccd5ff;
+  border-radius: 8px;
+}
