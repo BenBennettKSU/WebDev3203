@@ -66,10 +66,8 @@ footer {
   text-align: center;
   font-size: 0.9em;
   color: #555;
-}
-
-footer a {
-  color: #0044cc;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
 }
 
 /* ==== OPTIONAL UNIQUE PAGE STYLE ==== */
