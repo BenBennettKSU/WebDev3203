@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTTP / HTTPS Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>HTTP / HTTPS Self-Assessment Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="evolution_versions.html">Evolution and Versions</a> |
+      <a href="security_https.html">Security and HTTPS</a> |
+      <a href="modern_advances.html">Modern Advances</a> |
+      <a href="about.html">About</a> |
+      <a href="references.html">References</a> |
+      <a href="quiz.html">Quiz</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h2>Check Your Understanding</h2>
+    <p>
+      This quiz is a short self-assessment on HTTP and HTTPS based on the content of this website.
+      Answer the questions below, then click <strong>Submit Quiz</strong> to see your score and feedback.
+    </p>
+
+    <!-- Quiz Form -->
+    <form id="quiz-form">
+      <!-- Q1: Fill in the blank -->
+      <h3>Question 1 – Fill in the Blank</h3>
+      <p>1. What does HTTPS stand for?</p>
+      <label for="q1">Your answer:</label>
+      <input type="text" id="q1" name="q1" />
+
+      <!-- Q2: Multiple choice -->
+      <h3>Question 2 – Multiple Choice</h3>
+      <p>2. Which protocol does HTTP/3 use for transport?</p>
+      <label>
+        <input type="radio" name="q2" value="tcp">
+        TCP
+      </label><br>
+      <label>
+        <input type="radio" name="q2" value="udp_quic">
+        UDP using QUIC
+      </label><br>
+      <label>
+        <input type="radio" name="q2" value="ftp">
+        FTP
+      </label><br>
+      <label>
+        <input type="radio" name="q2" value="smtp">
+        SMTP
+      </label>
+
+      <!-- Q3: Multiple choice -->
+      <h3>Question 3 – Multiple Choice</h3>
+      <p>3. What is the main purpose of HTTPS?</p>
+      <label>
+        <input type="radio" name="q3" value="faster">
+        To make websites load faster only
+      </label><br>
+      <label>
+        <input type="radio" name="q3" value="style">
+        To control colors and fonts on a page
+      </label><br>
+      <label>
+        <input type="radio" name="q3" value="secure">
+        To encrypt data and protect communication between client and server
+      </label><br>
+      <label>
+        <input type="radio" name="q3" value="ads">
+        To insert advertisements into web pages
+      </label>
+
+      <!-- Q4: Multiple choice -->
+      <h3>Question 4 – Multiple Choice</h3>
+      <p>4. Which port does HTTPS typically use by default?</p>
+      <label>
+        <input type="radio" name="q4" value="80">
+        Port 80
+      </label><br>
+      <label>
+        <input type="radio" name="q4" value="21">
+        Port 21
+      </label><br>
+      <label>
+        <input type="radio" name="q4" value="25">
+        Port 25
+      </label><br>
+      <label>
+        <input type="radio" name="q4" value="443">
+        Port 443
+      </label>
+
+      <!-- Q5: Multi-selection -->
+      <h3>Question 5 – Multi-Selection</h3>
+      <p>5. Which of the following are benefits of using HTTPS? (Select all that apply.)</p>
+      <label>
+        <input type="checkbox" name="q5" value="encryption">
+        Encryption of data in transit
+      </label><br>
+      <label>
+        <input type="checkbox" name="q5" value="authentication">
+        Authentication of the website’s identity
+      </label><br>
+      <label>
+        <input type="checkbox" name="q5" value="integrity">
+        Protection against data being changed during transfer
+      </label><br>
+      <label>
+        <input type="checkbox" name="q5" value="more_ads">
+        Automatic insertion of more advertisements
+      </label>
+
+      <br><br>
+      <button type="submit">Submit Quiz</button>
+      <button type="button" id="reset-btn">Reset Quiz</button>
+    </form>
+
+    <!-- Results area -->
+    <h2>Results</h2>
+    <div id="results"></div>
+  </main>
+
+  <footer>
+    <p>This is a class project for IT 3203 - Web Development.</p>
+    <p><a href="https://ksuweb.github.io/IT3203/">Visit the course website</a></p>
+  </footer>
+
+  <!-- JavaScript for quiz logic -->
+  <script>
+    // Handle quiz submission
+    const form = document.getElementById('quiz-form');
+    const resultsDiv = document.getElementById('results');
+    const resetBtn = document.getElementById('reset-btn');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // stop page reload
+
+      let score = 0;
+      const totalQuestions = 5;
+      let feedbackHtml = '';
+
+      // ===== Question 1: Fill in the blank =====
+      const q1Input = document.getElementById('q1').value.trim().toLowerCase();
+      // Allow small variations, just check for key words
+      const hasHypertext = q1Input.includes('hypertext');
+      const hasTransfer = q1Input.includes('transfer');
+      const hasProtocol = q1Input.includes('protocol');
+      const hasSecure = q1Input.includes('secure');
+
+      if (hasHypertext && hasTransfer && hasProtocol && hasSecure) {
+        score++;
+        feedbackHtml += '<p class="correct">Q1: Correct! HTTPS stands for Hypertext Transfer Protocol Secure.</p>';
+      } else {
+        feedbackHtml += '<p class="incorrect">Q1: Incorrect. Correct answer: Hypertext Transfer Protocol Secure.</p>';
+      }
+
+      // ===== Question 2: Multiple choice =====
+      const q2 = form.q2.value;
+      if (q2 === 'udp_quic') {
+        score++;
+        feedbackHtml += '<p class="correct">Q2: Correct! HTTP/3 uses QUIC over UDP.</p>';
+      } else {
+        feedbackHtml += '<p class="incorrect">Q2: Incorrect. Correct answer: UDP using QUIC.</p>';
+      }
+
+      // ===== Question 3: Multiple choice =====
+      const q3 = form.q3.value;
+      if (q3 === 'secure') {
+        score++;
+        feedbackHtml += '<p class="correct">Q3: Correct! HTTPS is mainly used to encrypt data and secure communication.</p>';
+      } else {
+        feedbackHtml += '<p class="incorrect">Q3: Incorrect. Correct answer: To encrypt data and protect communication between client and server.</p>';
+      }
+
+      // ===== Question 4: Multiple choice =====
+      const q4 = form.q4.value;
+      if (q4 === '443') {
+        score++;
+        feedbackHtml += '<p class="correct">Q4: Correct! HTTPS typically uses port 443 by default.</p>';
+      } else {
+        feedbackHtml += '<p class="incorrect">Q4: Incorrect. Correct answer: Port 443.</p>';
+      }
+
+      // ===== Question 5: Multi-selection =====
+      const q5Selected = Array.from(document.querySelectorAll('input[name="q5"]:checked')).map(
+        checkbox => checkbox.value
+      );
+
+      const correctQ5 = ['encryption', 'authentication', 'integrity'];
+
+      const isQ5Correct =
+        q5Selected.length === correctQ5.length &&
+        correctQ5.every(value => q5Selected.includes(value));
+
+      if (isQ5Correct) {
+        score++;
+        feedbackHtml += '<p class="correct">Q5: Correct! HTTPS provides encryption, authentication, and data integrity.</p>';
+      } else {
+        feedbackHtml += '<p class="incorrect">Q5: Incorrect. Correct answers: Encryption of data in transit, authentication of the website’s identity, and protection against data being changed during transfer.</p>';
+      }
+
+      // ===== Overall result =====
+      const passed = score >= 3; // you can adjust the pass threshold
+      let overallHtml = '<p>Total Score: <strong>' + score + ' / ' + totalQuestions + '</strong></p>';
+
+      if (passed) {
+        overallHtml += '<p class="pass">Result: Pass</p>';
+      } else {
+        overallHtml += '<p class="fail">Result: Fail</p>';
+      }
+
+      resultsDiv.innerHTML = overallHtml + feedbackHtml;
+    });
+
+    // Handle reset button
+    resetBtn.addEventListener('click', function() {
+      form.reset();          // clear all inputs
+      resultsDiv.innerHTML = ''; // clear results
+    });
+  </script>
+
+</body>
+</html>
