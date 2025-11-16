@@ -138,7 +138,7 @@
     const resetBtn = document.getElementById('reset-btn');
 
     form.addEventListener('submit', function(event) {
-      6
+      event.preventDefault();
 
       let score = 0;
       const totalQuestions = 5;
@@ -204,7 +204,7 @@
       }
 
       // Overall result
-      const passed = score >= 3; // you can adjust the pass threshold
+      const passed = score >= 3; 
       
       let overallHtml = '<p>Total Score: <strong>' + score + ' / ' + totalQuestions + '</strong>' + '</p>';
       overallHtml += '<p>Grade: <strong>' + (score / totalQuestions) * 100 + '%</strong></p>'; 
@@ -223,8 +223,8 @@
 
     // Reset button
     resetBtn.addEventListener('click', function() {
-      form.reset();          // clear all inputs
-      resultsDiv.innerHTML = ''; // clear results
+      form.reset();         
+      resultsDiv.innerHTML = ''; 
     });
   </script>
 
