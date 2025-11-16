@@ -22,7 +22,7 @@
   </header>
 
   <main class="main-content">
-    <h2>Check Your Understanding</h2>
+    <h2>Hypertext Transfer Protocol Quiz</h2>
     <p>
       This quiz is a short self-assessment on HTTP and HTTPS based on the content of this website.
       Answer the questions below, then click <strong>Submit Quiz</strong> to see your score and feedback.
@@ -207,7 +207,12 @@
 
       // ===== Overall result =====
       const passed = score >= 3; // you can adjust the pass threshold
-      let overallHtml = '<p>Total Score: <strong>' + score + ' / ' + totalQuestions + '</strong></p>';
+      
+      let overallHtml = '<p>Total Score: <strong>' + score + ' / ' + totalQuestions + '</strong>' + '</p>';
+      overallHtml += '<p>Grade: <strong>' + (score / totalQuestions) * 100 + '%</strong></p>'; 
+
+
+     
 
       if (passed) {
         overallHtml += '<p class="pass">Result: Pass</p>';

@@ -1,3 +1,4 @@
+/* BODY */
 body {
   font-family: Arial, sans-serif;
   background-color: #f7f9ff;
@@ -5,49 +6,64 @@ body {
   margin: 30px;
 }
 
-/* ==== HEADER & NAVIGATION ==== */
-header {
+/* HEADER */
+header h1 {
+  font-size: 2.2rem;
+  color: #002b80;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+header {
+  padding: 10px 0;
+  border-bottom: 3px solid #ccd5ff;
+  margin-bottom: 20px;
+}
+
+
+/* SUBHEADER  */
+h2 {
+  text-align: center;
+  color: #003399;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #ccd5ff;
+  letter-spacing: 0.5px;
+}
+
+/* NAV */
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+  
 }
 
 nav a {
   text-decoration: none;
-  color: white;
-  background-color: #0044cc;
-  padding: 6px 10px;
-  border-radius: 4px;
-  margin: 0 4px;
-}
-
-nav a:hover {
-  background-color: #002a80;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  color: #001a66;
-}
-
-/* ==== HEADINGS ==== */
-h1 {
-  color: #002b80;
-}
-
-h2 {
   color: #003399;
-  border-bottom: 2px solid #99b3ff;
-  padding-bottom: 4px;
-  margin-top: 30px;
+  margin: 0 8px;
+  padding: 4px 6px;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease-in-out;
 }
 
-/* ==== LISTS ==== */
+/* NAV HOVER */
+nav a:hover {
+  border-bottom: 2px solid #003399;
+}
+
+
+/* LISTS */
 ul {
   list-style-type: square;
   margin-left: 30px;
 }
 
-/* ==== TABLE ==== */
+/* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -68,7 +84,7 @@ tr:nth-child(even) {
   background-color: #f2f5ff;
 }
 
-/* ==== FOOTER ==== */
+/* FOOTER */
 footer {
   margin-top: 40px;
   text-align: center;
@@ -78,7 +94,7 @@ footer {
   padding-top: 10px;
 }
 
-/* ==== OPTIONAL UNIQUE PAGE STYLE ==== */
+/* Optional Style */
 .custom_page {
   background-color: #ffffff;
   padding: 20px;
@@ -86,15 +102,23 @@ footer {
   border-radius: 8px;
 }
 
-/* Limit content width and center it */
+/* CENTER MAIN CONTENT */
 .main-content {
   max-width: 900px;
-  margin: 0 auto;       /* center horizontally */
+  margin: 0 auto;       
   background-color: #ffffff;
   padding: 20px;
   border: 1px solid #ccd5ff;
   border-radius: 8px;
 }
+
+.main-content ul {
+  list-style-type: square;
+  margin-left: 30px;
+}
+
+
+/* QUIZ FEEDBACK */
 
 .correct {
   color: green;
@@ -112,4 +136,37 @@ footer {
 .fail {
   color: red;
   font-weight: bold;
+}
+
+.toc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  list-style: none;
+
+}
+
+.toc-grid a {
+  display: block;
+  background-color: #eef3ff;
+  padding: 16px;
+  border-radius: 8px;
+  color: #003399;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #ccd5ff;
+  transition: 0.2s;
+}
+
+.toc-grid a:hover {
+  background-color: #dce7ff;
+  transform: scale(1.03);
+}
+
+.toc-grid ul {
+  list-style-type: none;
+  padding: 0;
 }
