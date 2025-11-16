@@ -19,6 +19,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+  color: #001a66;
 }
 
 /* ==== HEADINGS ==== */
@@ -76,4 +77,32 @@ footer {
   padding: 20px;
   border: 1px solid #ccd5ff;
   border-radius: 8px;
+}
+
+/* Limit content width and center it */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;       /* center horizontally */
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccd5ff;
+  border-radius: 8px;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+.pass {
+  color: green;
+  font-weight: bold;
+}
+
+.fail {
+  color: red;
+  font-weight: bold;
 }
