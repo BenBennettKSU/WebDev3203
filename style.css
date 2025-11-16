@@ -13,8 +13,15 @@ header {
 
 nav a {
   text-decoration: none;
-  color: #0044cc;
-  margin: 0 5px;
+  color: white;
+  background-color: #0044cc;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+nav a:hover {
+  background-color: #002a80;
 }
 
 nav a:hover {
