@@ -1,4 +1,5 @@
 
+/* BODY */
 body {
   font-family: Arial, sans-serif;
   background-color: #f7f9ff;
@@ -16,7 +17,7 @@ header h1 {
   letter-spacing: 1px;
 }
 
-*/
+
 header {
   position: fixed;
   top: 0;
@@ -146,11 +147,11 @@ footer {
   font-weight: bold;
 }
 
+/* TABLE OF CONTENTS/REFFERENCES GRID */
 .toc-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  /* limit the width of the grid on larger screens so it doesn't stretch too wide */
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
@@ -188,7 +189,7 @@ img {
   margin: 10px auto;
 }
 
-/* Styles for screens up to 768px wide */
+/* SMALLER SCREEN CSS */
 @media screen and (max-width: 768px) {
   body {
     margin: 20px;
@@ -206,8 +207,6 @@ img {
     border-bottom: none;
   }
 
-  /* Limit the width of the main content on smaller screens and remove borders.  Since the
-     header is fixed, add extra top margin so the content is not hidden behind the header. */
   .main-content {
     max-width: 100%;
     margin: 150px 0 0;
@@ -216,12 +215,11 @@ img {
     border-radius: 0;
   }
 
-  /* Reduce h2 font size on smaller screens */
   h2 {
     font-size: 1.2rem;
   }
 
-  /* Make the table horizontally scrollable on small screens */
+
   table {
     display: block;
     overflow-x: auto;
@@ -232,7 +230,7 @@ img {
     white-space: nowrap;
   }
 
-  /* Stack table of contents links without scaling on smaller screens */
+
   .toc-grid {
     max-width: 100%;
     gap: 8px;
@@ -243,7 +241,7 @@ img {
   }
 }
 
-/* Styles for screens up to 480px wide (smartphones) */
+/* MOBILE CSS */
 @media screen and (max-width: 480px) {
   header h1 {
     font-size: 1.5rem;
