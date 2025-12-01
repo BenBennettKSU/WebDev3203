@@ -127,106 +127,12 @@
   </main>
 
   <footer>
-    <p>This is a class project for IT 3203 - Web Development.</p>
+
+    <p>This is a class project for IT 3203 – Web Development.</p>
     <p><a href="https://ksuweb.github.io/IT3203/">Visit the course website</a></p>
   </footer>
 
-  <!-- JavaScript logic -->
-  <script>
-    const form = document.getElementById('quiz-form');
-    const resultsDiv = document.getElementById('results');
-    const resetBtn = document.getElementById('reset-btn');
-
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      let score = 0;
-      const totalQuestions = 5;
-      let feedbackHtml = '';
-
-      // Question 1
-      const q1Input = document.getElementById('q1').value.trim().toLowerCase();
-      const hasHypertext = q1Input.includes('hypertext');
-      const hasTransfer = q1Input.includes('transfer');
-      const hasProtocol = q1Input.includes('protocol');
-      const hasSecure = q1Input.includes('secure');
-
-      if (hasHypertext && hasTransfer && hasProtocol && hasSecure) {
-        score++;
-        feedbackHtml += '<p class="correct">Q1: Correct! HTTPS stands for Hypertext Transfer Protocol Secure.</p>';
-      } else {
-        feedbackHtml += '<p class="incorrect">Q1: Incorrect. Correct answer: Hypertext Transfer Protocol Secure.</p>';
-      }
-
-      //Question 2
-      const q2 = form.q2.value;
-      if (q2 === 'udp_quic') {
-        score++;
-        feedbackHtml += '<p class="correct">Q2: Correct! HTTP/3 uses QUIC over UDP.</p>';
-      } else {
-        feedbackHtml += '<p class="incorrect">Q2: Incorrect. Correct answer: UDP using QUIC.</p>';
-      }
-
-      // Question 3
-      const q3 = form.q3.value;
-      if (q3 === 'secure') {
-        score++;
-        feedbackHtml += '<p class="correct">Q3: Correct! HTTPS is mainly used to encrypt data and secure communication.</p>';
-      } else {
-        feedbackHtml += '<p class="incorrect">Q3: Incorrect. Correct answer: To encrypt data and protect communication between client and server.</p>';
-      }
-
-      // Question 4
-      const q4 = form.q4.value;
-      if (q4 === '443') {
-        score++;
-        feedbackHtml += '<p class="correct">Q4: Correct! HTTPS typically uses port 443 by default.</p>';
-      } else {
-        feedbackHtml += '<p class="incorrect">Q4: Incorrect. Correct answer: Port 443.</p>';
-      }
-
-      // Question 5
-      const q5Selected = Array.from(document.querySelectorAll('input[name="q5"]:checked')).map(
-        checkbox => checkbox.value
-      );
-
-      const correctQ5 = ['encryption', 'authentication', 'integrity'];
-
-      const isQ5Correct =
-        q5Selected.length === correctQ5.length &&
-        correctQ5.every(value => q5Selected.includes(value));
-
-      if (isQ5Correct) {
-        score++;
-        feedbackHtml += '<p class="correct">Q5: Correct! HTTPS provides encryption, authentication, and data integrity.</p>';
-      } else {
-        feedbackHtml += '<p class="incorrect">Q5: Incorrect. Correct answers: Encryption of data in transit, authentication of the website’s identity, and protection against data being changed during transfer.</p>';
-      }
-
-      // Overall result
-      const passed = score >= 3; 
-      
-      let overallHtml = '<p>Total Score: <strong>' + score + ' / ' + totalQuestions + '</strong>' + '</p>';
-      overallHtml += '<p>Grade: <strong>' + (score / totalQuestions) * 100 + '%</strong></p>'; 
-
-
-     
-
-      if (passed) {
-        overallHtml += '<p class="pass">Result: Pass</p>';
-      } else {
-        overallHtml += '<p class="fail">Result: Fail</p>';
-      }
-
-      resultsDiv.innerHTML = overallHtml + feedbackHtml;
-    });
-
-    // Reset button
-    resetBtn.addEventListener('click', function() {
-      form.reset();         
-      resultsDiv.innerHTML = ''; 
-    });
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>

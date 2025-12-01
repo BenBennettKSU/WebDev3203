@@ -1,4 +1,4 @@
-/* BODY */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f7f9ff;
@@ -7,6 +7,7 @@ body {
 }
 
 /* HEADER */
+
 header h1 {
   font-size: 2.2rem;
   color: #002b80;
@@ -15,14 +16,21 @@ header h1 {
   letter-spacing: 1px;
 }
 
+*/
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 10px 0;
   border-bottom: 3px solid #ccd5ff;
-  margin-bottom: 20px;
+  background-color: #f7f9ff;
+  z-index: 1000;
 }
 
 
 /* SUBHEADER  */
+
 h2 {
   text-align: center;
   color: #003399;
@@ -105,7 +113,7 @@ footer {
 /* CENTER MAIN CONTENT */
 .main-content {
   max-width: 900px;
-  margin: 0 auto;       
+  margin: 140px auto 0;
   background-color: #ffffff;
   padding: 20px;
   border: 1px solid #ccd5ff;
@@ -142,10 +150,10 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  max-width: 1000px;
+  /* limit the width of the grid on larger screens so it doesn't stretch too wide */
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  list-style: none;
 
 }
 
@@ -166,7 +174,92 @@ footer {
   transform: scale(1.03);
 }
 
+
 .toc-grid ul {
   list-style-type: none;
   padding: 0;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Styles for screens up to 768px wide */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 20px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px 0;
+    padding: 8px 0;
+    border-bottom: none;
+  }
+
+  /* Limit the width of the main content on smaller screens and remove borders.  Since the
+     header is fixed, add extra top margin so the content is not hidden behind the header. */
+  .main-content {
+    max-width: 100%;
+    margin: 150px 0 0;
+    padding: 15px;
+    border: none;
+    border-radius: 0;
+  }
+
+  /* Reduce h2 font size on smaller screens */
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Make the table horizontally scrollable on small screens */
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+
+  /* Stack table of contents links without scaling on smaller screens */
+  .toc-grid {
+    max-width: 100%;
+    gap: 8px;
+  }
+
+  .toc-grid a {
+    padding: 12px;
+  }
+}
+
+/* Styles for screens up to 480px wide (smartphones) */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  nav a {
+    padding: 6px 0;
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    padding: 10px;
+    margin-top: 160px;
+  }
 }
