@@ -5,143 +5,147 @@
   This page contains a self-assessment quiz on HTTP and HTTPS concepts covered in the website.
 -->
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTTP / HTTPS Quiz</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTTP / HTTPS Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
       <div class="header-top">
         <h1>HTTP / HTTPS Self-Assessment Quiz</h1>
         <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="key_concepts.html">Key Concepts</a>
-      <a href="evolution_versions.html">Evolution and Versions</a>
-      <a href="security_https.html">Security and HTTPS</a>
-      <a href="modern_advances.html">Modern Advances</a>
-      <a href="about.html">About</a>
-      <a href="references.html">References</a>
-      <a href="quiz.html">Quiz</a>
-    </nav>
-  </header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="key_concepts.html">Key Concepts</a>
+        <a href="evolution_versions.html">Evolution and Versions</a>
+        <a href="security_https.html">Security and HTTPS</a>
+        <a href="modern_advances.html">Modern Advances</a>
+        <a href="about.html">About</a>
+        <a href="references.html">References</a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
+    </header>
 
-  <main class="main-content">
-    <h2>Hypertext Transfer Protocol Quiz</h2>
-    <p>
-      This quiz is a short self-assessment on HTTP and HTTPS based on the content of this website.
-      Answer the questions below, then click <strong>Submit Quiz</strong> to see your score and feedback.
-    </p>
+    <main class="main-content">
+      <h2>Hypertext Transfer Protocol Quiz</h2>
+      <p>
+        This quiz is a short self-assessment on HTTP and HTTPS based on the
+        content of this website. Answer the questions below, then click
+        <strong>Submit Quiz</strong> to see your score and feedback.
+      </p>
 
-    <!-- Quiz -->
-    <form id="quiz-form">
-      <!-- Q1 -->
-      <h3>Question 1 – Fill in the Blank</h3>
-      <p>1. What does HTTPS stand for?</p>
-      <label for="q1">Your answer:</label>
-      <input type="text" id="q1" name="q1" />
+      <!-- Quiz -->
+      <form id="quiz-form">
+        <!-- Q1 -->
+        <h3>Question 1 – Fill in the Blank</h3>
+        <p>1. What does HTTPS stand for?</p>
+        <label for="q1">Your answer:</label>
+        <input type="text" id="q1" name="q1" />
 
-      <!-- Q2 -->
-      <h3>Question 2 – Multiple Choice</h3>
-      <p>2. Which protocol does HTTP/3 use for transport?</p>
-      <label>
-        <input type="radio" name="q2" value="tcp">
-        TCP
-      </label><br>
-      <label>
-        <input type="radio" name="q2" value="udp_quic">
-        UDP using QUIC
-      </label><br>
-      <label>
-        <input type="radio" name="q2" value="ftp">
-        FTP
-      </label><br>
-      <label>
-        <input type="radio" name="q2" value="smtp">
-        SMTP
-      </label>
+        <!-- Q2 -->
+        <h3>Question 2 – Multiple Choice</h3>
+        <p>2. Which protocol does HTTP/3 use for transport?</p>
+        <label>
+          <input type="radio" name="q2" value="tcp" />
+          TCP </label
+        ><br />
+        <label>
+          <input type="radio" name="q2" value="udp_quic" />
+          UDP using QUIC </label
+        ><br />
+        <label>
+          <input type="radio" name="q2" value="ftp" />
+          FTP </label
+        ><br />
+        <label>
+          <input type="radio" name="q2" value="smtp" />
+          SMTP
+        </label>
 
-      <!-- Q3 -->
-      <h3>Question 3 – Multiple Choice</h3>
-      <p>3. What is the main purpose of HTTPS?</p>
-      <label>
-        <input type="radio" name="q3" value="faster">
-        To make websites load faster only
-      </label><br>
-      <label>
-        <input type="radio" name="q3" value="style">
-        To control colors and fonts on a page
-      </label><br>
-      <label>
-        <input type="radio" name="q3" value="secure">
-        To encrypt data and protect communication between client and server
-      </label><br>
-      <label>
-        <input type="radio" name="q3" value="ads">
-        To insert advertisements into web pages
-      </label>
+        <!-- Q3 -->
+        <h3>Question 3 – Multiple Choice</h3>
+        <p>3. What is the main purpose of HTTPS?</p>
+        <label>
+          <input type="radio" name="q3" value="faster" />
+          To make websites load faster only </label
+        ><br />
+        <label>
+          <input type="radio" name="q3" value="style" />
+          To control colors and fonts on a page </label
+        ><br />
+        <label>
+          <input type="radio" name="q3" value="secure" />
+          To encrypt data and protect communication between client and server </label
+        ><br />
+        <label>
+          <input type="radio" name="q3" value="ads" />
+          To insert advertisements into web pages
+        </label>
 
-      <!-- Q4 -->
-      <h3>Question 4 – Multiple Choice</h3>
-      <p>4. Which port does HTTPS typically use by default?</p>
-      <label>
-        <input type="radio" name="q4" value="80">
-        Port 80
-      </label><br>
-      <label>
-        <input type="radio" name="q4" value="21">
-        Port 21
-      </label><br>
-      <label>
-        <input type="radio" name="q4" value="25">
-        Port 25
-      </label><br>
-      <label>
-        <input type="radio" name="q4" value="443">
-        Port 443
-      </label>
+        <!-- Q4 -->
+        <h3>Question 4 – Multiple Choice</h3>
+        <p>4. Which port does HTTPS typically use by default?</p>
+        <label>
+          <input type="radio" name="q4" value="80" />
+          Port 80 </label
+        ><br />
+        <label>
+          <input type="radio" name="q4" value="21" />
+          Port 21 </label
+        ><br />
+        <label>
+          <input type="radio" name="q4" value="25" />
+          Port 25 </label
+        ><br />
+        <label>
+          <input type="radio" name="q4" value="443" />
+          Port 443
+        </label>
 
-      <!-- Q5 -->
-      <h3>Question 5 – Multi-Selection</h3>
-      <p>5. Which of the following are benefits of using HTTPS? (Select all that apply.)</p>
-      <label>
-        <input type="checkbox" name="q5" value="encryption">
-        Encryption of data in transit
-      </label><br>
-      <label>
-        <input type="checkbox" name="q5" value="authentication">
-        Authentication of the website’s identity
-      </label><br>
-      <label>
-        <input type="checkbox" name="q5" value="integrity">
-        Protection against data being changed during transfer
-      </label><br>
-      <label>
-        <input type="checkbox" name="q5" value="more_ads">
-        Automatic insertion of more advertisements
-      </label>
+        <!-- Q5 -->
+        <h3>Question 5 – Multi-Selection</h3>
+        <p>
+          5. Which of the following are benefits of using HTTPS? (Select all
+          that apply.)
+        </p>
+        <label>
+          <input type="checkbox" name="q5" value="encryption" />
+          Encryption of data in transit </label
+        ><br />
+        <label>
+          <input type="checkbox" name="q5" value="authentication" />
+          Authentication of the website’s identity </label
+        ><br />
+        <label>
+          <input type="checkbox" name="q5" value="integrity" />
+          Protection against data being changed during transfer </label
+        ><br />
+        <label>
+          <input type="checkbox" name="q5" value="more_ads" />
+          Automatic insertion of more advertisements
+        </label>
 
-      <br><br>
-      <button type="submit">Submit Quiz</button>
-      <button type="button" id="reset-btn">Reset Quiz</button>
-    </form>
+        <br /><br />
+        <button type="submit">Submit Quiz</button>
+        <button type="button" id="reset-btn">Reset Quiz</button>
+      </form>
 
-    <!-- Results -->
-    <h2>Results</h2>
-    <div id="results"></div>
-  </main>
+      <!-- Results -->
+      <h2>Results</h2>
+      <div id="results"></div>
+    </main>
 
-  <footer>
+    <footer>
+      <p>This is a class project for IT 3203 – Web Development.</p>
+      <p>
+        <a href="https://ksuweb.github.io/IT3203/">Visit the course website</a>
+      </p>
+    </footer>
 
-    <p>This is a class project for IT 3203 – Web Development.</p>
-    <p><a href="https://ksuweb.github.io/IT3203/">Visit the course website</a></p>
-  </footer>
-
-  <script src="script.js"></script>
-  <script src="nav.js"></script>
-
-</body>
+    <script src="script.js"></script>
+    <script src="nav.js"></script>
+  </body>
 </html>

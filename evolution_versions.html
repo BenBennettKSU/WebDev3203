@@ -6,111 +6,125 @@
 -->
 
 <html lang="en">
-
-
   <head>
     <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Evolution of HTTP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Evolution of HTTP</title>
+  </head>
 
-</head>
-
-
-<body>
-  <header>
+  <body>
+    <header>
       <div class="header-top">
         <h1>Evolution of HTTP</h1>
         <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       </div>
-    
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="key_concepts.html">Key Concepts</a>
-      <a href="evolution_versions.html">Evolution and Versions</a>
-      <a href="security_https.html">Security and HTTPS</a>
-      <a href="modern_advances.html">Modern Advances</a>
-      <a href="about.html">About</a>
-      <a href="references.html">References</a>
-      <a href="quiz.html">Quiz</a>
-    </nav>
-  </header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="key_concepts.html">Key Concepts</a>
+        <a href="evolution_versions.html">Evolution and Versions</a>
+        <a href="security_https.html">Security and HTTPS</a>
+        <a href="modern_advances.html">Modern Advances</a>
+        <a href="about.html">About</a>
+        <a href="references.html">References</a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
+    </header>
 
-  <main class="main-content">
-    <h2>Overview</h2>
+    <main class="main-content">
+      <h2>Overview</h2>
 
-    <p>
-      The Hypertext Transfer Protocol (HTTP) has evolved dramatically since its creation 
-      by Tim Berners-Lee in the early 1990s. What began as a simple way to request 
-      and deliver hypertext documents has become a powerful, secure system 
-      supporting everything from cloud computing to video streaming.
-    </p>
+      <p>
+        The Hypertext Transfer Protocol (HTTP) has evolved dramatically since
+        its creation by Tim Berners-Lee in the early 1990s. What began as a
+        simple way to request and deliver hypertext documents has become a
+        powerful, secure system supporting everything from cloud computing to
+        video streaming.
+      </p>
 
+      <h2>Major Versions of HTTP</h2>
 
-    <h2>Major Versions of HTTP</h2>
+      <ul>
+        <li>
+          <strong>HTTP/0.9 (1991):</strong> The very first version, supporting
+          only simple GET requests and delivering raw HTML.
+        </li>
+        <li>
+          <strong>HTTP/1.0 (1996):</strong> Introduced status codes, headers,
+          and support for different content types.
+        </li>
+        <li>
+          <strong>HTTP/1.1 (1997):</strong> Brought persistent connections,
+          chunked transfer encoding, and additional cache control mechanisms.
+          This version remains widely used today.
+        </li>
+        <li>
+          <strong>HTTP/2 (2015):</strong> A major overhaul focusing on
+          performance improvements, including multiplexing, header compression,
+          and server push capabilities.
+        </li>
+        <li>
+          <strong>HTTP/3 (2020):</strong> Built on the QUIC transport protocol,
+          HTTP/3 aims to reduce latency and improve connection reliability,
+          especially in mobile and lossy network environments.
+        </li>
+      </ul>
 
-    <ul> 
-      <li><strong>HTTP/0.9 (1991):</strong> The very first version, supporting only simple GET requests and delivering raw HTML.</li>
-      <li><strong>HTTP/1.0 (1996):</strong> Introduced status codes, headers, and support for different content types.</li>
-      <li><strong>HTTP/1.1 (1997):</strong> Brought persistent connections, chunked transfer encoding, and additional cache control mechanisms. This version remains widely used today.</li>
-      <li><strong>HTTP/2 (2015):</strong> A major overhaul focusing on performance improvements, including multiplexing, header compression, and server push capabilities.</li>
-      <li><strong>HTTP/3 (2020):</strong> Built on the QUIC transport protocol, HTTP/3 aims to reduce latency and improve connection reliability, especially in mobile and lossy network environments.</li>
-    </ul>
+      <h2>Feature Comparison</h2>
+      <table>
+        <tr>
+          <th>Version</th>
+          <th>Year</th>
+          <th>Key Features</th>
+        </tr>
 
-    <h2>Feature Comparison</h2>
-    <table>
-      <tr>
-        <th>Version</th>
-        <th>Year</th>
-        <th>Key Features</th>
-      </tr>
+        <tr>
+          <td>HTTP/0.9</td>
+          <td>1991</td>
+          <td>Simple GET requests, raw HTML delivery</td>
+        </tr>
+        <tr>
+          <td>HTTP/1.0</td>
+          <td>1996</td>
+          <td>Status codes, headers, content types</td>
+        </tr>
+        <tr>
+          <td>HTTP/1.1</td>
+          <td>1997</td>
+          <td>Persistent connections, chunked transfer, cache control</td>
+        </tr>
+        <tr>
+          <td>HTTP/2</td>
+          <td>2015</td>
+          <td>Multiplexing, header compression, server push</td>
+        </tr>
+        <tr>
+          <td>HTTP/3</td>
+          <td>2020</td>
+          <td>Built on QUIC, reduced latency, improved reliability</td>
+        </tr>
+      </table>
 
-      <tr>
-        <td>HTTP/0.9</td>
-        <td>1991</td>
-        <td>Simple GET requests, raw HTML delivery</td>
-      </tr>
-      <tr>
-        <td>HTTP/1.0</td>
-        <td>1996</td>
-        <td>Status codes, headers, content types</td>
-      </tr>
-      <tr>
-        <td>HTTP/1.1</td>
-        <td>1997</td>
-        <td>Persistent connections, chunked transfer, cache control</td>
-      </tr>
-      <tr>
-        <td>HTTP/2</td>
-        <td>2015</td>
-        <td>Multiplexing, header compression, server push</td>
-      </tr>
-      <tr>
-        <td>HTTP/3</td>
-        <td>2020</td>
-        <td>Built on QUIC, reduced latency, improved reliability</td>
-      </tr>
+      <h2>Summary</h2>
 
-    </table>
+      <p>
+        The evolution of HTTP reflects the changing needs of the web and its
+        users. Each version has introduced significant improvements in
+        performance, security, and functionality, enabling the rich, interactive
+        experiences we expect today. As the internet continues to grow and
+        evolve, so too will the protocols that underpin it.
+      </p>
+    </main>
+    <footer>
+      <!-- Standard footer text and link used across all pages -->
+      <p>This is a class project for IT 3203 – Web Development.</p>
+      <p>
+        <a href="https://ksuweb.github.io/IT3203/">Visit the course website</a>
+      </p>
+    </footer>
 
-    <h2>Summary</h2>
-
-    <p>
-      The evolution of HTTP reflects the changing needs of the web and its users.
-      Each version has introduced significant improvements in performance, security,
-      and functionality, enabling the rich, interactive experiences we expect today.
-      As the internet continues to grow and evolve, so too will the protocols that underpin it.
-    </p>
-  </main>
-  <footer>
-    <!-- Standard footer text and link used across all pages -->
-    <p>This is a class project for IT 3203 – Web Development.</p>
-    <p><a href="https://ksuweb.github.io/IT3203/">Visit the course website</a></p>
-  </footer>
-
-  <!-- For NAV Button -->
-  <script src="nav.js"></script>
-</body>
-
+    <!-- For NAV Button -->
+    <script src="nav.js"></script>
+  </body>
 </html>
