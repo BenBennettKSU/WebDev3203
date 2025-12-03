@@ -195,6 +195,7 @@ footer {
   transform: scale(1.03);
 }
 
+/* IMAGE STYLES */
 img {
   max-width: 100%;
   height: auto;
@@ -202,7 +203,7 @@ img {
   margin: 10px auto;
 }
 
-/* Quiz form touch-friendly styles */
+/* QUIZ FORM COMPOENTS */
 #quiz-form label {
   display: block;
   padding: 10px 14px;
@@ -245,13 +246,14 @@ img {
 }
 
 
+/* INCREASE INPUT SIZES */
 #quiz-form input[type="radio"],
 #quiz-form input[type="checkbox"] {
   transform: scale(1.3);
   margin-right: 10px;
 }
 
-/* SMALLER SCREEN CSS (tablets + phones) */
+/* SMALLER SCREEN CSS */
 @media screen and (max-width: 768px) {
   body {
     margin: 20px;
@@ -282,7 +284,7 @@ img {
     display: flex;
   }
 
-  /* Style the navigation items like buttons on smaller screens. */
+  /* NAV STYLE FOR SMALLER SCREENS */
   nav a {
     display: block;
     margin: 5px 0;
@@ -328,7 +330,7 @@ img {
 
 }
 
-/* Extra-small screens (phones) */
+/* EXTRA SMALL SCREEN STYLING */
 @media screen and (max-width: 480px) {
   body {
     margin: 15px;
