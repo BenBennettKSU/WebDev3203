@@ -20,12 +20,12 @@ header {
   z-index: 1000;
 }
 
-/* Title + button wrapper */
+/* Title + button */
 .header-top {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
@@ -67,10 +67,6 @@ nav a:hover {
   background: none;
   border: none;
   cursor: pointer;
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 /* SUBHEADER  */
