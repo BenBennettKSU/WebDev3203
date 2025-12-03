@@ -205,6 +205,10 @@ img {
     margin: 20px;
   }
 
+  header {
+    position: static
+  }
+
   header h1 {
     font-size: 1.8rem;
     margin-bottom: 0;
@@ -261,26 +265,5 @@ img {
 
   .toc-grid a {
     padding: 12px;
-  }
-}
-
-/* MOBILE CSS (small phones) */
-@media screen and (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1rem;
-  }
-
-  nav a {
-    padding: 6px 0;
-    font-size: 0.9rem;
-  }
-
-  .main-content {
-    padding: 10px;
-    margin-top: 130px;
   }
 }
