@@ -22,9 +22,10 @@ header {
 
 /* Title + button wrapper */
 .header-top {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; /* center title on desktop */
+  justify-content: center;
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
@@ -34,7 +35,7 @@ header h1 {
   font-size: 2.2rem;
   color: #002b80;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 0;
   letter-spacing: 1px;
 }
 
@@ -65,7 +66,10 @@ nav a:hover {
   background: none;
   border: none;
   cursor: pointer;
-  margin-left: auto; /* when visible, push it to the right */
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* SUBHEADER  */
@@ -206,24 +210,16 @@ img {
     margin-bottom: 0;
   }
 
-  /* Title + hamburger side by side */
-  .header-top {
-    justify-content: space-between;
-  }
-
-  /* Show the hamburger */
   .menu-toggle {
     display: block;
   }
 
-  /* Hide nav by default on small screens */
   header nav {
     display: none;
     flex-direction: column;
     margin-top: 10px;
   }
 
-  /* When JS adds .open, show nav */
   header nav.open {
     display: flex;
   }
