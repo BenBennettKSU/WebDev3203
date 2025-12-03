@@ -242,6 +242,17 @@ img {
   transition: 0.2s;
 }
 
+#quiz-form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ccd5ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #eef3ff;
+}
+
 #quiz-form button:hover {
   background-color: #dce7ff;
   transform: scale(1.03);
