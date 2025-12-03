@@ -95,15 +95,3 @@ resetBtn.addEventListener('click', function() {
   form.reset();
   resultsDiv.innerHTML = '';
 });
-
-// Navigation menu toggle for mobile view
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector("header nav");
-
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
-    });
-  }
-});
