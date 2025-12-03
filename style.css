@@ -8,6 +8,22 @@ body {
   margin: 30px;
 }
 
+/* Extra-small screens (phones) */
+@media screen and (max-width: 480px) {
+  body {
+    margin: 15px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  nav a {
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+}
+
 /* HEADER */
 header {
   position: fixed;
@@ -200,6 +216,23 @@ img {
   margin: 10px auto;
 }
 
+/* Quiz form touch-friendly styles */
+#quiz-form label {
+  display: block;
+  padding: 10px 14px;
+  margin: 6px 0;
+  background-color: #eef3ff;
+  border: 1px solid #ccd5ff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#quiz-form input[type="radio"],
+#quiz-form input[type="checkbox"] {
+  transform: scale(1.3);
+  margin-right: 10px;
+}
+
 /* SMALLER SCREEN CSS (tablets + phones) */
 @media screen and (max-width: 768px) {
   body {
@@ -231,11 +264,16 @@ img {
     display: flex;
   }
 
+  /* Style the navigation items like buttons on smaller screens. */
   nav a {
     display: block;
-    margin: 4px 0;
-    padding: 8px 0;
-    border-bottom: 1px solid #ccd5ff;
+    margin: 5px 0;
+    padding: 10px 0;
+    background-color: #eef3ff;
+    border: 1px solid #ccd5ff;
+    border-radius: 6px;
+    color: #003399;
+    text-decoration: none;
   }
 
   .main-content {
@@ -269,4 +307,5 @@ img {
   .toc-grid a {
     padding: 12px;
   }
+
 }
