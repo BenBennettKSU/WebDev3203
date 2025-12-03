@@ -227,6 +227,27 @@ img {
   cursor: pointer;
 }
 
+#quiz-form button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  background-color: #eef3ff;
+  color: #003399;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 1px solid #ccd5ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#quiz-form button:hover {
+  background-color: #dce7ff;
+  transform: scale(1.03);
+}
+
+
 #quiz-form input[type="radio"],
 #quiz-form input[type="checkbox"] {
   transform: scale(1.3);
