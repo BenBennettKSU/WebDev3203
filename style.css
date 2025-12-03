@@ -206,7 +206,8 @@ img {
   }
 
   header {
-    position: static
+    position: relative;
+    padding: 15px 0;
   }
 
   header h1 {
