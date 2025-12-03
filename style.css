@@ -1,4 +1,4 @@
-
+/* This is the CSS file for my project */
 /* BODY */
 body {
   font-family: Arial, sans-serif;
@@ -64,7 +64,6 @@ nav a {
 nav a:hover {
   border-bottom: 2px solid #003399;
 }
-
 
 /* LISTS */
 ul {
@@ -176,11 +175,6 @@ footer {
 }
 
 
-.toc-grid ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 
 img {
   max-width: 100%;
@@ -259,5 +253,44 @@ img {
   .main-content {
     padding: 10px;
     margin-top: 160px;
+  }
+  
+}
+
+/* HIDE THE MENU BUTTON ON DESKTOP */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 8px;
+}
+
+/* SHOW MENU BUTTON ON MOBILE */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 2000;
+  }
+
+  header nav {
+    display: none;  
+    flex-direction: column;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  header nav.open {
+    display: flex;  
+  }
+
+  nav a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid #ccd5ff;
   }
 }

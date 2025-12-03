@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+  key_concepts.html
+
+  Dedicated key concepts page for HTTP. Summarizes how HTTP works, the
+  request/response model, common methods, and core terminology.
+-->
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTTP Key Concepts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+~
+<body>
+  <header>
+    <h1>HTTP Key Concepts</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="key_concepts.html">Key Concepts</a>
+      <a href="evolution_versions.html">Evolution and Versions</a>
+      <a href="security_https.html">Security and HTTPS</a>
+      <a href="modern_advances.html">Modern Advances</a>
+      <a href="about.html">About</a>
+      <a href="references.html">References</a>
+      <a href="quiz.html">Quiz</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h2>What is HTTP?</h2>
+    <p>
+      The Hypertext Transfer Protocol (HTTP) is the application-level protocol that powers the World Wide Web.
+      It defines how a client (such as a browser) requests resources and how a server responds with the requested
+      data. Every time you click a link or type a URL, your device uses HTTP to retrieve text, images, video, and more.
+    </p>
+
+    <h2>Request/Response Model</h2>
+    <p>HTTP communication follows a simple request/response pattern:</p>
+    <ul>
+      <li><strong>Request:</strong> The client sends a message specifying the action to perform (for example, GET or POST) and the target URL.</li>
+      <li><strong>Response:</strong> The server replies with a status code, headers, and an optional body that contains the requested content or an error message.</li>
+    </ul>
+    <p>
+      Status codes such as 200 OK or 404 Not Found tell the client whether the request was successful.
+      Headers provide metadata such as content type and caching rules.
+    </p>
+
+    <!-- IMAGE -->
+    <img src="images/HTTP-.gif" 
+    alt="HTTP GIF" style="max-width: 800px; display: block; margin: 10px auto;">
+
+    <h2>Common Methods</h2>
+    <p>HTTP defines many methods to describe the desired action. Some of the most common are:</p>
+    <ul>
+      <li><strong>GET:</strong> Retrieve a resource without modifying it. The most frequently used method.</li>
+      <li><strong>POST:</strong> Submit data to the server, often resulting in a change of state or a side effect.</li>
+      <li><strong>PUT:</strong> Replace a resource at a given URL with the data provided by the client.</li>
+      <li><strong>DELETE:</strong> Remove the specified resource from the server.</li>
+    </ul>
+
+    <h2>Important Concepts</h2>
+    <ul>
+      <li><strong>URL (Uniform Resource Locator):</strong> The address used to locate a resource on the web.</li>
+      <li><strong>Headers:</strong> Key value pairs describing the request or response, caching rules, and more.</li>
+      <li><strong>Statelessness:</strong> Each HTTP request is independent; servers do not retain session state between requests unless additional mechanisms like cookies are used.</li>
+    </ul>
+
+    <p>
+      By mastering these basics, it becomes easier to understand the evolution of HTTP, the security improvements
+      brought by HTTPS, and the modern performance enhancements covered on the other pages of this site.
+    </p>
+  </main>
+
+  <footer>
+    <p>This is a class project for IT 3203 – Web Development.</p>
+    <p><a href="https://ksuweb.github.io/IT3203/">Visit the course website</a></p>
+  </footer>
+</body>
+</html>
