@@ -1,16 +1,10 @@
 // This JavaScript file contains the logic for the HTTP/HTTPS quiz.
-// It listens for the quiz form submission, calculates the score,
-// provides per‑question feedback, and offers a reset option. Keeping
-// this logic in an external file improves code organization and
-// reusability across the website.
-
 // Grab references to the quiz form and results container
 const form = document.getElementById('quiz-form');
 const resultsDiv = document.getElementById('results');
 const resetBtn = document.getElementById('reset-btn');
 
-// Handle quiz submission. Prevents the page from reloading and
-// calculates the user's score based on their responses.
+// Handle quiz submission. Prevents the page from reloading and calculates the user's score based on their responses.
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -100,4 +94,16 @@ form.addEventListener('submit', function(event) {
 resetBtn.addEventListener('click', function() {
   form.reset();
   resultsDiv.innerHTML = '';
+});
+
+// Navigation menu toggle for mobile view
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("header nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+  }
 });
