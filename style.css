@@ -8,21 +8,7 @@ body {
   margin: 30px;
 }
 
-/* Extra-small screens (phones) */
-@media screen and (max-width: 480px) {
-  body {
-    margin: 15px;
-  }
 
-  header h1 {
-    font-size: 1.6rem;
-  }
-
-  nav a {
-    padding: 12px 0;
-    font-size: 1rem;
-  }
-}
 
 /* HEADER */
 header {
@@ -340,4 +326,20 @@ img {
     padding: 12px;
   }
 
+}
+
+/* Extra-small screens (phones) */
+@media screen and (max-width: 480px) {
+  body {
+    margin: 15px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  nav a {
+    padding: 12px 0;
+    font-size: 1rem;
+  }
 }
